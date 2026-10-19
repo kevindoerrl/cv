@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>CV Kevin Doerrleben</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --ink: #1c2230;
+    --muted: #5b6475;
+    --accent: #2f5d8a;
+    --side: #1f2a3a;
+    --side-ink: #e8edf4;
+    --side-muted: #a9b4c4;
+    --line: #e3e7ee;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; }
+  body {
+    font-family: Inter, "Helvetica Neue", Arial, sans-serif;
+    color: var(--ink);
+    font-size: 9.6pt;
+    line-height: 1.45;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page { width: 210mm; height: 297mm; display: grid; grid-template-columns: 68mm 1fr; overflow: hidden; }
+
+  /* Zijbalk */
+  aside { background: var(--side); color: var(--side-ink); padding: 14mm 8mm 12mm; }
+  .photo { width: 40mm; height: 40mm; border-radius: 50%; overflow: hidden; margin: 0 auto 8mm; border: 2.5px solid rgba(255,255,255,.18); }
+  .photo img { width: 100%; height: 100%; object-fit: cover; }
+  aside h2 { font-size: 8.4pt; letter-spacing: .14em; text-transform: uppercase; color: #fff; font-weight: 700; margin: 0 0 3mm; padding-bottom: 1.8mm; border-bottom: 1px solid rgba(255,255,255,.18); }
+  aside section { margin-bottom: 7mm; }
+  .contact li { list-style: none; margin-bottom: 2.2mm; font-size: 8.8pt; }
+  .contact .lbl { display: block; color: var(--side-muted); font-size: 7.4pt; text-transform: uppercase; letter-spacing: .08em; }
+  .contact a { color: var(--side-ink); text-decoration: none; word-break: break-word; }
+  .tags li { list-style: none; margin-bottom: 1.6mm; font-size: 8.8pt; padding-left: 3.5mm; position: relative; }
+  .tags li::before { content: ""; position: absolute; left: 0; top: 2mm; width: 1.4mm; height: 1.4mm; border-radius: 50%; background: #7fa7d1; }
+  .lang li { list-style: none; display: flex; justify-content: space-between; font-size: 8.8pt; margin-bottom: 1.6mm; }
+  .lang span:last-child { color: var(--side-muted); }
+
+  /* Hoofdkolom */
+  main { padding: 14mm 13mm 12mm 12mm; }
+  header h1 { font-size: 25pt; font-weight: 800; letter-spacing: -.01em; line-height: 1.05; }
+  header .role { color: var(--accent); font-weight: 600; font-size: 11pt; margin-top: 1.5mm; }
+  .profile { margin-top: 5mm; color: #2c3445; }
+  main h2 { font-size: 9pt; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin: 7mm 0 3.5mm; padding-bottom: 1.8mm; border-bottom: 1.5px solid var(--line); }
+  .item { margin-bottom: 4mm; break-inside: avoid; }
+  .item-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .item-title { font-weight: 700; font-size: 10.2pt; }
+  .item-date { color: var(--muted); font-size: 8.4pt; white-space: nowrap; font-weight: 500; }
+  .item-org { color: var(--muted); font-weight: 500; font-size: 9pt; }
+  .item ul { margin: 1.4mm 0 0 4mm; }
+  .item li { margin-bottom: .8mm; }
+  .compact .item { margin-bottom: 2.6mm; }
+  .clients { margin-top: 1.2mm; font-size: 8.8pt; }
+  .clients b { font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="page">
+  <aside>
+    <div class="photo"><img src="foto.jpg" alt="Kevin Doerrleben"></div>
+
+    <section>
+      <h2>Contact</h2>
+      <ul class="contact">
+        <li><span class="lbl">Telefoon</span>06 28 29 23 65</li>
+        <li><span class="lbl">E-mail</span><a href="mailto:kdoerrleben@gmail.com">kdoerrleben@gmail.com</a></li>
+        <li><span class="lbl">Woonplaats</span>Hoogvliet, Rotterdam</li>
+        <li><span class="lbl">LinkedIn</span><a href="https://www.linkedin.com/in/kevin-doerrleben-251295304/">linkedin.com/in/kevin-doerrleben</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Vaardigheden</h2>
+      <ul class="tags">
+        <li>Video-editing (short &amp; long form)</li>
+        <li>Content creatie voor YouTube &amp; social media</li>
+        <li>Storytelling &amp; retentie</li>
+        <li>Thumbnails &amp; visuele presentatie</li>
+        <li>Klantcontact &amp; gastvrijheid</li>
+        <li>Ondernemerschap &amp; retail</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Eigenschappen</h2>
+      <ul class="tags">
+        <li>Stressbestendig</li>
+        <li>Verantwoordelijk &amp; zelfstandig</li>
+        <li>Teamspeler</li>
+        <li>Leergierig</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Talen</h2>
+      <ul class="lang">
+        <li><span>Nederlands</span><span>Moedertaal</span></li>
+        <li><span>Engels</span><span>Goed</span></li>
+      </ul>
+    </section>
+  </aside>
+
+  <main>
+    <header>
+      <h1>Kevin Doerrleben</h1>
+      <div class="role">Video Editor &amp; Content Creator · HBO-student Ondernemerschap &amp; Retail Management</div>
+    </header>
+
+    <p class="profile">
+      Gedreven video editor en content creator uit Rotterdam. Met mijn eigen YouTube-kanaal heb ik
+      ruim 20.000 abonnees opgebouwd, en sinds twee jaar edit ik als freelancer video's voor
+      bedrijven en creators. Naast mijn studie Ondernemerschap &amp; Retail Management werk ik
+      in de horeca, waar ik heb geleerd om onder druk klantgericht te blijven. Ik combineer creatief
+      inzicht met een ondernemende, zelfstandige werkhouding en wil me blijven ontwikkelen.
+    </p>
+
+    <h2>Werkervaring</h2>
+
+    <div class="item">
+      <div class="item-head"><span class="item-title">Freelance Video Editor</span><span class="item-date">2024 – heden</span></div>
+      <div class="item-org">Zelfstandig</div>
+      <ul>
+        <li>Monteren van video's voor bedrijven en content creators, van ruw materiaal tot publicatieklare video.</li>
+        <li>Afstemmen van stijl, tempo en deadlines met de klant; zelfstandig plannen van meerdere projecten tegelijk.</li>
+      </ul>
+      <div class="clients"><b>Opdrachtgevers o.a.:</b> Amixmedia, JordyStorm</div>
+    </div>
+
+    <div class="item">
+      <div class="item-head"><span class="item-title">YouTube Content Creator</span><span class="item-date">heden</span></div>
+      <div class="item-org">Eigen kanaal · 20.000+ abonnees</div>
+      <ul>
+        <li>Volledig zelf bedenken, opnemen, editen en publiceren van video's.</li>
+        <li>Een publiek van ruim 20.000 abonnees opgebouwd door consistente uploads en het analyseren van kijkcijfers.</li>
+      </ul>
+    </div>
+
+    <div class="item">
+      <div class="item-head"><span class="item-title">Medewerker</span><span class="item-date">okt 2022 – heden</span></div>
+      <div class="item-org">I Love Sushi</div>
+      <ul>
+        <li>Gastvrij en snel helpen van klanten, ook tijdens drukke diensten.</li>
+        <li>Samenwerken in een team waarin tempo en kwaliteit centraal staan.</li>
+      </ul>
+    </div>
+
+    <div class="compact">
+      <div class="item">
+        <div class="item-head"><span class="item-title">Medewerker</span><span class="item-date">nov 2021 – mrt 2022</span></div>
+        <div class="item-org">New York Pizza</div>
+      </div>
+      <div class="item">
+        <div class="item-head"><span class="item-title">Vakkenvuller</span><span class="item-date">nov 2020 – jun 2021</span></div>
+        <div class="item-org">Jumbo</div>
+      </div>
+      <div class="item">
+        <div class="item-head"><span class="item-title">Krantenbezorger</span><span class="item-date">okt 2018 – jan 2020</span></div>
+        <div class="item-org">Spotta</div>
+      </div>
+    </div>
+
+    <h2>Opleiding</h2>
+
+    <div class="compact">
+      <div class="item">
+        <div class="item-head"><span class="item-title">HBO Ondernemerschap &amp; Retail Management</span><span class="item-date">2023 – heden</span></div>
+        <div class="item-org">Hogeschool Rotterdam</div>
+      </div>
+      <div class="item">
+        <div class="item-head"><span class="item-title">HAVO (Havo-top)</span><span class="item-date">2021 – 2023</span></div>
+        <div class="item-org">Penta College CDG Hoogvliet</div>
+      </div>
+      <div class="item">
+        <div class="item-head"><span class="item-title">MAVO</span><span class="item-date">2017 – 2021</span></div>
+        <div class="item-org">Charles de Foucauld</div>
+      </div>
+    </div>
+  </main>
+</div>
+</body>
+</html>
