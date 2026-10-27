@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<title>CV Kevin Doerrleben – Afstudeerstage</title>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  @page { size: A4; margin: 0; }
+  :root {
+    --ink: #14161c;
+    --text: #2f3440;
+    --muted: #6b7180;
+    --accent: #2b59c3;
+    --accent-soft: #e8eefb;
+    --line: #e7e8ec;
+    --panel: #f6f6f8;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; }
+  body {
+    font-family: Manrope, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text);
+    font-size: 8.8pt;
+    line-height: 1.38;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  a { color: inherit; text-decoration: none; }
+  .page { width: 210mm; height: 297mm; overflow: hidden; display: flex; flex-direction: column; }
+
+  /* Kop */
+  header { display: flex; align-items: center; gap: 7mm; padding: 11mm 14mm 0; }
+  .photo { width: 31mm; height: 31mm; border-radius: 50%; overflow: hidden; flex: none; }
+  .photo img { width: 100%; height: 100%; object-fit: cover; }
+  h1 { font-size: 27pt; font-weight: 800; color: var(--ink); letter-spacing: -.02em; line-height: 1; }
+  h1 span { color: var(--accent); }
+  .role { font-size: 10.5pt; font-weight: 600; color: var(--ink); margin-top: 2.2mm; }
+  .contact { display: flex; flex-wrap: wrap; gap: 1mm 5mm; margin-top: 3mm; font-size: 8.4pt; color: var(--muted); }
+  .contact b { color: var(--accent); font-weight: 700; margin-right: 1mm; }
+
+  /* Cijfers */
+  .stats { display: grid; grid-template-columns: repeat(4, 1fr); margin: 5mm 14mm 0; background: var(--ink); border-radius: 3mm; color: #fff; }
+  .stat { padding: 2.8mm 4mm; border-left: 1px solid rgba(255,255,255,.12); }
+  .stat:first-child { border-left: 0; }
+  .stat strong em, .stat strong { }
+  .stat strong { display: block; font-size: 15pt; font-weight: 800; line-height: 1.1; color: #fff; }
+  .stat strong em { font-style: normal; color: #7fa2ec; }
+  .stat span { font-size: 7.6pt; color: #b9bdc7; }
+
+  /* Lichaam */
+  .body { display: grid; grid-template-columns: 1fr 60mm; gap: 9mm; padding: 4.5mm 14mm 7mm; flex: 1; }
+  h2 { font-size: 8.2pt; font-weight: 800; letter-spacing: .16em; text-transform: uppercase; color: var(--ink); margin: 0 0 3mm; display: flex; align-items: center; gap: 2.5mm; }
+  h2::before { content: ""; width: 4mm; height: 1.6mm; background: var(--accent); border-radius: 1mm; }
+  section + section { margin-top: 4.5mm; }
+
+  .profile { color: var(--text); font-size: 9.1pt; }
+
+  .job { position: relative; padding-left: 4.5mm; margin-bottom: 3mm; break-inside: avoid; }
+  .job::before { content: ""; position: absolute; left: 0; top: 1.6mm; width: 1.6mm; height: 1.6mm; border-radius: 50%; background: var(--accent); }
+  .job::after { content: ""; position: absolute; left: .7mm; top: 4mm; bottom: -3.2mm; width: .25mm; background: var(--line); }
+  .job:last-child::after { display: none; }
+  .job-head { display: flex; justify-content: space-between; gap: 3mm; align-items: baseline; }
+  .job-title { font-weight: 800; color: var(--ink); font-size: 9.8pt; }
+  .job-date { font-size: 7.8pt; color: var(--muted); white-space: nowrap; font-weight: 600; }
+  .job-org { font-size: 8.5pt; color: var(--accent); font-weight: 700; }
+  .job ul { margin: 1mm 0 0 3.6mm; }
+  .job li { margin-bottom: .5mm; }
+  .job li::marker { color: var(--muted); }
+  .job p { margin-top: .8mm; }
+  .sub { display: flex; justify-content: space-between; font-size: 8.5pt; margin-top: .6mm; }
+  .sub span:last-child { color: var(--muted); font-size: 7.8pt; font-weight: 600; white-space: nowrap; }
+
+  /* Zijkolom */
+  aside { background: var(--panel); border-radius: 3mm; padding: 5mm 5mm; align-self: start; }
+  .edu { margin-bottom: 2.8mm; }
+  .edu strong { display: block; color: var(--ink); font-weight: 800; font-size: 8.9pt; line-height: 1.3; }
+  .edu span { display: block; font-size: 8.2pt; color: var(--muted); }
+  .chips { display: flex; flex-wrap: wrap; gap: 1.4mm; }
+  .chip { font-size: 7.9pt; font-weight: 600; padding: .9mm 2.2mm; border-radius: 10mm; background: #fff; border: 1px solid var(--line); color: var(--ink); }
+  .chip.hot { background: var(--accent-soft); border-color: #c4d3f3; color: #1f4396; }
+  .list li { list-style: none; display: flex; justify-content: space-between; font-size: 8.5pt; margin-bottom: 1.1mm; }
+  .list li span:last-child { color: var(--muted); }
+  .quote { font-size: 8.8pt; font-weight: 600; color: var(--ink); line-height: 1.4; border-left: 2px solid var(--accent); padding-left: 2.6mm; }
+  .quote-by { font-size: 7.6pt; color: var(--muted); margin-top: 1.2mm; padding-left: 3mm; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="photo"><img src="foto.jpg" alt="Kevin Doerrleben"></div>
+    <div>
+      <h1>Kevin Doerrleben<span>.</span></h1>
+      <div class="role">HBO-student Ondernemerschap &amp; Retail Management · Afstudeerstage</div>
+      <div class="contact">
+        <span><b>T</b>06 28 29 23 65</span>
+        <span><b>E</b><a href="mailto:kdoerrleben@gmail.com">kdoerrleben@gmail.com</a></span>
+        <span><b>W</b>Hoogvliet, Rotterdam</span>
+        <span><b>in</b><a href="https://www.linkedin.com/in/kevin-doerrleben-251295304/">linkedin.com/in/kevin-doerrleben</a></span>
+      </div>
+    </div>
+  </header>
+
+  <div class="stats">
+    <div class="stat"><strong>10</strong><span>eindpresentatie data-project Facilicom</span></div>
+    <div class="stat"><strong>9,3</strong><span>individueel portfolio</span></div>
+    <div class="stat"><strong>GRAILS<em>'26</em></strong><span>internationale AI-competitie, Denemarken</span></div>
+    <div class="stat"><strong>KvK</strong><span>eigen onderneming sinds 2024</span></div>
+  </div>
+
+  <div class="body">
+    <main>
+      <section>
+        <h2>Profiel</h2>
+        <p class="profile">
+          Vierdejaars HBO-student op zoek naar een afstudeerstage. Ik haal energie uit vraagstukken op het snijvlak
+          van business en data: van een brede vraag naar een concrete, gevalideerde oplossing, zoals het Power
+          BI-product dat ik voor Facilicom ontwikkelde. Met mijn eigen onderneming ben ik gewend zelfstandig te
+          werken, met klanten te schakelen en verantwoordelijkheid te nemen.
+        </p>
+      </section>
+
+      <section>
+        <h2>Ervaring</h2>
+
+        <div class="job">
+          <div class="job-head"><span class="job-title">Stagiair Data &amp; Innovatie / Business Analyst</span><span class="job-date">feb 2026 – jun 2026</span></div>
+          <div class="job-org">Facilicom Groep / GOM · Stage</div>
+          <ul>
+            <li>Hoe kan Facilicom data commercieel inzetten? Via geteste prototypes en in samenwerking met vijf stakeholders naar een gevalideerd eindproduct.</li>
+            <li>Ontwikkeld: <b>Smart Cleaning Insights</b>, een <b>Power BI-dashboard</b> dat schoonmaakdata omzet in inzichten voor klanten, plus een concept voor een slimme schoonmaakkar die automatisch operationele data verzamelt.</li>
+            <li>Beoordeeld met een <b>10</b> voor de eindpresentatie en een <b>9,3</b> voor mijn individuele portfolio.</li>
+            <li>Deelgenomen aan <b>GRAILS 2026</b> (Denemarken), internationale competitie over ethische AI: met mijn team bouwde ik de webapp <b>CleanFlow AI</b>.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-title">Eigenaar</span><span class="job-date">2024 – heden</span></div>
+          <div class="job-org">Kev Studios · Eigen onderneming (videoproductie)</div>
+          <ul>
+            <li>Onderneming opgezet en ingeschreven bij de KvK; verantwoordelijk voor acquisitie, offertes, klantrelaties en planning.</li>
+            <li>Werk voor 6+ opdrachtgevers, waaronder een contentbureau, een videoproductiebedrijf en horeca; vijf positieve klantreviews.</li>
+            <li>Eigen website gebouwd en werkprocessen geautomatiseerd met AI-tools.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-title">Medeoprichter · Marketing</span><span class="job-date">sep 2024 – jun 2025</span></div>
+          <div class="job-org">PadelGrab · Studentstart-up Hogeschool Rotterdam</div>
+          <ul>
+            <li>Met vier studenten een padelgadget van idee naar product gebracht; ik was verantwoordelijk voor de marketing tot en met de eerste verkopen.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-title">Afleveringschauffeur</span><span class="job-date">parttime</span></div>
+          <div class="sub"><span>Apotheek Bernisse</span><span>dec 2025 – heden</span></div>
+          <div class="sub"><span>Broadrunners</span><span>jul 2024 – heden</span></div>
+          <div class="sub"><span>I Love Sushi</span><span>okt 2022 – heden</span></div>
+        </div>
+
+        <div class="job">
+          <div class="job-head"><span class="job-title">Overig</span><span class="job-date">2020 – heden</span></div>
+          <div class="sub"><span>Content creator · eigen YouTube-kanaal (22K abonnees)</span><span>2021 – heden</span></div>
+          <div class="sub"><span>Stage docent LO · Charles de Foucauld</span><span>nov 2021 – feb 2022</span></div>
+          <div class="sub"><span>Fietskoerier · New York Pizza</span><span>nov 2021 – mrt 2022</span></div>
+          <div class="sub"><span>Vakkenvuller · Jumbo</span><span>nov 2020 – jun 2021</span></div>
+        </div>
+      </section>
+    </main>
+
+    <aside>
+      <section>
+        <h2>Opleiding</h2>
+        <div class="edu"><strong>HBO Ondernemerschap &amp; Retail Management</strong><span>Hogeschool Rotterdam Business School<br>2023 – heden · jaar 4</span></div>
+        <div class="edu"><strong>HAVO (diploma)</strong><span>Penta College CDG Hoogvliet<br>2021 – 2023</span></div>
+        <div class="edu"><strong>MAVO (diploma)</strong><span>Charles de Foucauld · 2017 – 2021</span></div>
+      </section>
+
+      <section>
+        <h2>Software</h2>
+        <div class="chips">
+          <span class="chip hot">Power BI</span>
+          <span class="chip hot">AI-tools (Claude)</span>
+          <span class="chip">Premiere Pro</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Vaardigheden</h2>
+        <div class="chips">
+          <span class="chip">Data-analyse</span>
+          <span class="chip">Dashboarding</span>
+          <span class="chip">Business development</span>
+          <span class="chip">Commerciële propositie</span>
+          <span class="chip">Stakeholdermanagement</span>
+          <span class="chip">Ondernemerschap</span>
+          <span class="chip">Pitchen &amp; presenteren</span>
+          <span class="chip">Marketing</span>
+        </div>
+      </section>
+
+      <section>
+        <h2>Talen &amp; overig</h2>
+        <ul class="list">
+          <li><span>Nederlands</span><span>Moedertaal</span></li>
+          <li><span>Engels</span><span>Goed</span></li>
+          <li><span>Rijbewijs</span><span>B</span></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Referentie</h2>
+        <p class="quote">“Je hebt een goed beeld van de businesswaarde en de vertaling naar de data-oplossing.”</p>
+        <p class="quote-by">Docent Hogeschool Rotterdam · beoordeling portfolio Facilicom-project</p>
+      </section>
+
+    </aside>
+  </div>
+</div>
+</body>
+</html>
